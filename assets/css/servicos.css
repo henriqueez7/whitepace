@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+}
+
+body{
+    background-color: #f1f6fc31;
+}
+
+
+/*menu*/
+header{
+    background-image: url(/assets/img/background-servicos.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+}
+    
+
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.ul{
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.ul a{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    display: block;
+}
+
+.ul a:not(.btn):after{
+    content: "";
+    background: #4f9cf9;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+
+.ul a:hover::after{
+    width: 100%;
+}
+
+/*menu responsivo*/
+.menu-icon{
+    cursor: pointer;
+    font-size: 25px;
+    color: #fff;
+    display: none;
+}
+
+nav .close-icon{
+    display: none;
+    font-size: 30px;
+    color: white;
+}
+
+.btn{
+    background-color: #4f9cf9;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 1s;
+    color: #fff;
+    
+}
+
+.btn.animate-btn{
+    animation: animate-outline 1s ease-out infinite;
+}
+
+.btn:hover{
+    background-color: #3580db;
+}
+
+@keyframes animate-outline{
+    from{
+        outline: 0px solid #4f9bf98a;
+    }
+    to{
+        outline: 15px solid #4f9bf900;
+    }
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-text{
+    margin: 150px;
+    text-align: center;
+    padding: 0 90px;
+}
+
+.banner-text h1{
+    font-size: 6rem;
+    color: #fff;
+}
+
+.banner-text p{
+    font-size: 1.1rem;
+    color: #f0c6c6b7;
+    font-weight: lighter;
+    margin: 18px 0;
+}
+
+
+h3{
+    font-size: 50px;
+}
+
+p{
+    color: #0000009c;
+}
+
+section, 
+footer{
+    padding: 54px 0;
+}
+
+/* Página Servicos*/
+.servicos h3{
+    text-align: center;
+}
+
+.servicos .container > p{
+    text-align: center;
+}
+
+.rows-cards{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.row-card-item{
+    background-color: #d3e6fd;
+    width: 350px;
+    padding: 20px;
+    border-radius: 14px;
+    margin: 20px;
+    transition: 0.3s;
+}
+
+.row-card-item:hover{
+    background-color: #4f9cf9;
+    cursor: pointer;
+}
+
+.row-card-item:hover p{
+    color: white;
+}
+
+.row-card-item img{
+    background-color: #4f9cf9;
+    border-radius: 14px;
+    width: 70px;
+    padding: 9px;
+}
+
+.nome-servico{
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.descricao-servico{
+    transition: 0.3s;
+}
+/* Final Servicos*/ 
+
+/*Inicio dos Dados*/ 
+
+
+/*Final dos Dados*/ 
+
+
+
+.footer{
+    background-color: #4f9cf9;
+    text-align: center;
+}
+
+.footer i{
+    color: #4f9cf9;
+    font-size: 19px;
+    background-color: #fff;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 10px;
+}
+
+.text-footer{
+    margin-top: 10px;
+    color: #fff;
+}
+
+
+@media(max-width: 830px){
+    /*menu mobile*/
+    .ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #184b88;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;  
+        clip-path: circle(0% at 100% 0);
+        transition: 0.8s;
+
+    }
+
+    ul.open{
+        clip-path: circle(141.2% at 0 100%);
+    }
+
+    .ul a{
+        font-size: 16px;
+    }
+    nav .menu-icon{
+        display: block;
+    }
+
+    nav .close-icon{
+        display: block;
+        position: absolute;
+        top: 46px;
+        right: 28px;
+        cursor: pointer;
+    }
+}

@@ -116,7 +116,7 @@ nav .close-icon{
 .banner-text{
     margin: 150px;
     text-align: center;
-    padding: 0 90px;
+    padding: 0 50px;
 }
 
 .banner-text h1{
@@ -194,14 +194,43 @@ footer{
 .descricao-servico{
     transition: 0.3s;
 }
-/* Final Servicos*/ 
-
-/*Inicio dos Dados*/ 
 
 
-/*Final dos Dados*/ 
+/*Dados*/ 
+.dados{
+    background-color: #d3e6fd;
+}
 
+.dados .container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
+.dados-item{
+    text-align: center;
+    margin: 15px;
+    color: #000000be;
+}
+
+.dados-item p{
+    display: flex;
+    flex-direction: column;
+}
+
+.dados-item p strong{
+    font-size: 1.5rem;
+}
+
+.dados-item img{
+    background-color: #4f9cf9;
+    border-radius: 14px;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 80px;
+}
+
+/*Footer*/ 
 
 .footer{
     background-color: #4f9cf9;
@@ -222,6 +251,11 @@ footer{
     color: #fff;
 }
 
+@media (max-width: 500px) {
+    .banner .banner-text h1{
+        font-size: 3rem;
+    }
+}
 
 @media(max-width: 830px){
     /*menu mobile*/
@@ -257,4 +291,10 @@ footer{
         right: 28px;
         cursor: pointer;
     }
+
+    .banner 
+    .banner-text h1{
+        font-size: 4rem;
+    }
 }
+

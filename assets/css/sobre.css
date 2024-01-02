@@ -192,6 +192,12 @@ footer{
     color: #fff;
 }
 
+@media (max-width: 500px) {
+    .banner .banner-text h1{
+        font-size: 3rem;
+    }
+}
+
 
 @media(max-width: 830px){
     /*menu mobile*/
@@ -226,5 +232,25 @@ footer{
         top: 46px;
         right: 28px;
         cursor: pointer;
+    }
+
+    /*Sobre Responsigo*/
+
+    .sobre .container{
+        flex-direction: column-reverse;
+    }
+
+    .sobre .sobre-img,
+    .sobre .sobre-text{
+        width: 100%;
+    }
+
+    .sobre .sobre-text{
+        margin-top: 40px;
+    }
+
+    .banner 
+    .banner-text h1{
+        font-size: 4rem;
     }
 }
